@@ -11,7 +11,7 @@ const setupInput = (conn) => {
   stdin.resume();
 
   const handleUserInput = (key) => {
-    if(key === '\u0003') {
+    if (key === '\u0003') {
       process.exit();
     } else if (key === 'w') {
       conn.write('Move: up');
@@ -24,10 +24,10 @@ const setupInput = (conn) => {
     } else if (key === 'q') {
       conn.write('Say: MOOOOOOVE');
     } else if (key === 'e') {
-      conn.write('Say: Gotcha')
+      conn.write('Say: Gotcha');
     }
   };
-  stdin.on('data', handleUserInput)
+  stdin.on('data', handleUserInput);
   
   return stdin;
 };
